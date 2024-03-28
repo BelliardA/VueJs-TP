@@ -6,12 +6,13 @@ import { ref, watch } from 'vue';
 const keyword = ref('');
 const filmTrier = ref(films);
 
+//fonction  de recherche qui filtre les films en fonction du mot clé
 const search = () => {
-    filmTrier.value = films.filter(film => film.titre.toLowerCase().includes(keyword.value.toLowerCase()));
+    filmTrier.value = films.filter(film => film.titre.toLowerCase().includes(keyword.value.toLowerCase()));//cherche dans films si un titre est similaire au caractère entré
 }
 
 watch(keyword, () => {
-    search();
+    search();   //appelle la fonction search à chaque fois que keyword change
 });
 </script>
 
@@ -28,6 +29,7 @@ watch(keyword, () => {
     <main class="list">
         <div v-for="film in filmTrier">
             <router-link class="link" :to="`/film/${film.id}`">
+                <!--redirige vers la page description avec l'identifaint -->
                 <FilmCard :film="film"></FilmCard>
             </router-link>
         </div>

@@ -2,9 +2,9 @@
 import { films } from './../assets/arena-lapraille.js';
 import { useRoute } from 'vue-router';
 
-const route = useRoute();
+const route = useRoute();       //utilisation du router pour récupérer l'id
 let film;
-films.map(r => {
+films.map(r => {    //va chercher le film qui a l'id correspondant dans la liste des tous les films
     if (r.id == route.params.id) {
         film = r;
     }
@@ -15,20 +15,21 @@ films.map(r => {
     <main>
         <div class="text-gauche">
             <h2>{{ film.titre }}</h2>
-            <h3 v-if="film.titreOriginal">titre original : {{ film.titreOriginal }}</h3>
+            <h3 v-if="film.titreOriginal"><strong>Titre original :</strong> {{ film.titreOriginal }}</h3>
             <div>
-                <p>durée : {{ film.duree }} minutes</p>
-                <p>langue : {{ film.langue }}</p>
+                <p><strong>Durée : </strong>{{ film.duree }} minutes</p>
+                <p><strong>Langue : </strong>{{ film.langue }}</p>
             </div>
-            <p>Age légal : {{ film.ageLegal }}</p>
+            <p><strong>Age légal :</strong> {{ film.ageLegal }}</p>
             <div class="mini-description">
-                <p>genre:</p>
+                <p><strong>Genre :</strong></p>
                 <p v-for="unGenre in film.genre">{{ unGenre }}</p>
             </div>
-            <p class="description">Description : {{ film.description }}</p>
+            <p class="description"><strong>Description : </strong>{{ film.description }}</p>
             <h3>Les Séances d'aujourd'hui</h3>
-            <div v-for="seance in film.seances">
+            <div class="salle-heure" v-for="seance in film.seances">
                 <p>Salle : {{ seance.salle }}</p>
+                <p>|</p>
                 <p>Heure : {{ seance.heure }}</p>
             </div>
         </div>
@@ -54,5 +55,10 @@ main {
 .mini-description {
     display: flex;
     gap: 5px;
+}
+
+.salle-heure {
+    display: flex;
+    gap: 20px;
 }
 </style>
