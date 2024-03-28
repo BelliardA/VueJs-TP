@@ -18,13 +18,18 @@ watch(keyword, () => {
 <template>
     <form class="input-box">
         <div>
-            <label for="films">Titre Films</label>
-            <input id="films" name="films" type="search" v-model="keyword" placeholder="Kung-fu panda">
+            <label for="films">
+                <h2>Chercher un film</h2>
+            </label>
+            <input class="input-search" id="films" name="films" type="search" v-model="keyword"
+                placeholder="Kung-fu panda">
         </div>
     </form>
     <main class="list">
         <div v-for="film in filmTrier">
-            <FilmCard :film="film"></FilmCard>
+            <router-link class="link" :to="`/film/${film.id}`">
+                <FilmCard :film="film"></FilmCard>
+            </router-link>
         </div>
     </main>
 
@@ -48,5 +53,19 @@ watch(keyword, () => {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
     gap: 10px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.input-search {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
 }
 </style>

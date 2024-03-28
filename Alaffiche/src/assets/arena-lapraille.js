@@ -1,5 +1,6 @@
 export const films = [
   {
+    "id": 1,
     "titre": "Kung Fu Panda 4",
 	  "imageURL": "https://schedule.arena.ch/__images/artwork/1017424.ch_fr.jpg",
     "ageLegal": 6,
@@ -23,6 +24,7 @@ export const films = [
     ]
   },
   {
+    "id": 2,
     "titre": "Arthur the King",
     "imageURL": "https://schedule.arena.ch/__images/artwork/1019669.ch_fr.jpg",
     "ageLegal": 8,
@@ -42,6 +44,7 @@ export const films = [
     ]
   },
   {
+    "id": 3,
     "titre": "Il reste encore demain",
     "titreOriginal": "C'è ancora domani",
     "imageURL": "https://schedule.arena.ch/__images/artwork/1019532.ch_fr.jpg",
@@ -58,6 +61,7 @@ export const films = [
     ]
   },
   {
+    "id": 4,
     "titre": "Maison de retraite 2",
     "imageURL": "https://schedule.arena.ch/__images/artwork/1019534.ov.jpg",
     "ageLegal": 10,
@@ -73,6 +77,7 @@ export const films = [
     ]
   },
   {
+    "id": 5,
     "titre": "Dune: Deuxième partie",
     "titreOriginal": "Dune: Part Two",
     "imageURL": "https://schedule.arena.ch/__images/artwork/1016059.ch_fr.jpg",
@@ -97,6 +102,7 @@ export const films = [
     ]
   },
   {
+    "id": 6,
     "titre": "Chien et Chat",
     "imageURL": "https://schedule.arena.ch/__images/artwork/1018500.ov.jpg",
     "ageLegal": 8,
@@ -112,6 +118,7 @@ export const films = [
     ]
   },
   {
+    "id": 7,
     "titre": "Cocorico",
     "imageURL": "https://schedule.arena.ch/__images/artwork/1018080.ch_fr.jpg",
     "ageLegal": 8,
@@ -127,6 +134,7 @@ export const films = [
     ]
   },
   {
+    "id": 8,
     "titre": "Asha et la bonne étoile",
     "titreOriginal": "Wish",
     "imageURL": "https://schedule.arena.ch/__images/artwork/1017700.ch_fr.jpg",
@@ -143,6 +151,7 @@ export const films = [
     ]
   },
   {
+        "id": 9,
         "titre": "Wonka",
         "imageURL": "https://schedule.arena.ch/__images/artwork/1015011.ch_fr.jpg",
         "ageLegal": 6,
@@ -158,6 +167,7 @@ export const films = [
         ]
     },
     {
+        "id": 10,
         "titre": "Migration",
         "imageURL": "https://schedule.arena.ch/__images/artwork/1011896.ch_fr.jpg",
         "ageLegal": 6,
@@ -173,6 +183,7 @@ export const films = [
         ]
     },
 	{
+        "id": 11,
         "titre": "Tout sauf toi",
         "titreOriginal": "Anyone But You",
         "imageURL": "https://schedule.arena.ch/__images/artwork/1018808.ch_fr.jpg",
@@ -189,6 +200,7 @@ export const films = [
         ]
     },
     {
+        "id": 12,
         "titre": "The Beekeeper",
         "imageURL": "https://schedule.arena.ch/__images/artwork/1019011.ch_fr.jpg",
         "ageLegal": 16,
