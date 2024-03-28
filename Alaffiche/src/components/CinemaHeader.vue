@@ -9,14 +9,14 @@ const cinema = ref('La Praille ');
     <header>
         <h1>{{ cinema + name }}</h1>
         <div class="pages">
-            <a href="#">Accueil</a>
-            <a href="#">Films</a>
+            <router-link class="link" to="/">Accueil</router-link>
+            <router-link class="link" to="/cinema">Cinéma</router-link>
         </div>
     </header>
 </template>
 
 <style scoped>
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,11 +26,13 @@ header{
     border: 1px solid black;
     border-radius: 10px;
 }
-.pages{
+
+.pages {
     display: flex;
     gap: 50px;
 }
-.pages a{
+
+.link {
     text-decoration: none;
     color: black;
     font-size: 1.5rem;

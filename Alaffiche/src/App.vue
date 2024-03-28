@@ -1,13 +1,10 @@
 <script setup>
 import CinemaHeader from './components/CinemaHeader.vue'
-import FilmList from './components/FilmList.vue'
 </script>
 
 <template>
   <CinemaHeader></CinemaHeader>
-  <FilmList></FilmList>
+  <router-view></router-view>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
