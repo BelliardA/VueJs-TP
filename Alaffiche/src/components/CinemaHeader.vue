@@ -1,8 +1,8 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const name = ref('Arnaud')
-const cinema = ref('La Praille ')
+const name = ref('Arnaud');
+const cinema = ref('La Praille ');
 </script>
 
 <template>
