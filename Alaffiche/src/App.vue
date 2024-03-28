@@ -1,15 +1,11 @@
 <script setup>
 import CinemaHeader from './components/CinemaHeader.vue'
-import FilmCard from './components/FilmCard.vue'
-import {films} from './assets/arena-lapraille.js'
+import FilmList from './components/FilmList.vue'
 </script>
 
 <template>
   <CinemaHeader></CinemaHeader>
-
-  <div v-for="film in films">
-    <FilmCard :film="film"></FilmCard>
-  </div>
+  <FilmList></FilmList>
 </template>
 
 <style scoped>
