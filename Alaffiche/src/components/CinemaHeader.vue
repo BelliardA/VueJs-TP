@@ -12,6 +12,7 @@ const cinema = ref('La Praille ');
         <div class="pages">
             <router-link class="link" to="/">Accueil</router-link>
             <router-link class="link" to="/cinema">Cinéma</router-link>
+            <router-link class="link" to="/selected">Ma liste</router-link>
         </div>
     </header>
 </template>

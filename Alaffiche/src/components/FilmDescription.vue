@@ -1,17 +1,34 @@
 <script setup>
 import { films } from './../assets/arena-lapraille.js';
 import { useRoute } from 'vue-router';
+import { useStore } from './../store/store.js';
+import { toRefs } from 'vue';
 
-const route = useRoute();       //utilisation du router pour récupérer l'id
+const store = useStore();
+const { selectedFilms, addFilm, dellFilm } = store;
+
+const route = useRoute();
+
 let film;
 films.map(r => {    //va chercher le film qui a l'id correspondant dans la liste des tous les films
     if (r.id == route.params.id) {
         film = r;
     }
 })
+
+const addFilmToList = () => {
+    addFilm(film);
+}
+
+const removeFilmFromList = () => {
+    dellFilm(film);
+}
+
 </script>
 
 <template>
+    <button class="btn add" @click="addFilmToList">Ajouter le film dans la list</button>
+    <button class="btn dell" @click="removeFilmFromList">Retirer le film de la list</button>
     <main>
         <div class="text-gauche">
             <h2>{{ film.titre }}</h2>
@@ -60,5 +77,24 @@ main {
 .salle-heure {
     display: flex;
     gap: 20px;
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.add:hover {
+    background-color: green;
+    color: white;
+}
+
+.dell:hover {
+    background-color: red;
+    color: white;
 }
 </style>
