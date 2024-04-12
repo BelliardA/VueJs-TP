@@ -10,12 +10,19 @@ const { selectedFilms } = store;
 
 <template>
     <section>
-        <div v-for="film in selectedFilms" :key="film.id">
-            <router-link class="link" :to="`/film/${film.id}`">
-                <!--redirige vers la page description avec l'identifaint -->
-                <FilmCard :film="film"></FilmCard>
-            </router-link>
+        <div v-if="selectedFilms.length != 0">
+            <div v-for="film in selectedFilms" :key="film.id">
+                <router-link class="link" :to="`/film/${film.id}`">
+                    <!--redirige vers la page description avec l'identifaint -->
+                    <FilmCard :film="film"></FilmCard>
+                </router-link>
+            </div>
         </div>
+        <div v-else>
+            <h2>Rien par ici ...</h2>
+            <h2>Pour ajouter des films dans votre liste, appuyer sur le bouton 'ajouter ce film dans ma liste'</h2>
+        </div>
+
     </section>
 </template>
 
