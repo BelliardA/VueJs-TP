@@ -1,4 +1,5 @@
 <script setup>
+import router from '@/router';
 import { ref } from 'vue';
 
 const name = ref('Arnaud');
