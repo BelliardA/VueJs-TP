@@ -22,7 +22,6 @@ const { selectedFilms } = store;
             <h2>Rien par ici ...</h2>
             <h2>Pour ajouter des films dans votre liste, appuyer sur le bouton 'ajouter ce film dans ma liste'</h2>
         </div>
-
     </section>
 </template>
 
